@@ -34,3 +34,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+실수로 push 를 master로 해버렸고, 기본 브랜치는 main인데 쓸데없이 또다른 master라는 브랜치가 생겨버렸다.
+해결:
+git checkout master
+git branch main master -f
+git checkout main
+git push origin main -f
+git push origin --delete master
