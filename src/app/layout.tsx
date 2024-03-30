@@ -1,9 +1,19 @@
 import Navigation from "@/components/Navigation";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Playfair_Display, Nunito_Sans } from "next/font/google";
 import "./styles/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--point-text",
+});
+
+const nunitoSans = Nunito_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--basic-text",
+});
 
 export const metadata: Metadata = {
   title: "Sona next books",
@@ -16,8 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html
+      lang="en"
+      className={`${playfairDisplay.variable} ${nunitoSans.variable}`}
+    >
+      <body>
         <Navigation />
         {children}
       </body>

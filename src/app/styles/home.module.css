@@ -1,0 +1,41 @@
+.section {
+  padding: 2rem;
+}
+.list_cate {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.list_cate li {
+  flex: 1;
+}
+.list_cate button {
+  width: 100%;
+  padding: 0.2rem 0;
+  font-weight: 700;
+  font-size: 0.8rem;
+  border: 1px solid #000;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.list_cate button:hover {
+  background-color: #eee;
+}
+
+.list_lists {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.list_lists li {
+}
+.list_lists a {
+  display: inline-block;
+  padding: 0 0.4rem;
+  border: 1px solid #aaa;
+  border-radius: 100px;
+  font-family: var(--point-text);
+}
