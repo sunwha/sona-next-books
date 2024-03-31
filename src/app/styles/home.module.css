@@ -39,7 +39,12 @@
   border: 1px solid #aaa;
   border-radius: 4px;
   font-family: var(--point-text);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  transition: margin-top 0.3s;
 }
 .list_lists a::after {
   content: " →";
+}
+.list_lists a:hover {
+  margin-top: -4px;
 }
